@@ -1,0 +1,147 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Content Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button id="historyButton" onclick="toggleHistory()">
+    🕘 История
+</button>
+
+
+<div class="container">
+
+    <header>
+        <h1>AI Content Assistant</h1>
+        <p>Инструменты для работы с текстом</p>
+    </header>
+
+
+    <textarea
+        id="text"
+        placeholder="Вставьте текст..."
+    ></textarea>
+
+
+    <div class="buttons">
+
+        <button onclick="generate('improve')">
+            ✨ Улучшить
+        </button>
+
+        <button onclick="generate('summarize')">
+            ✂️ Сократить
+        </button>
+
+        <button onclick="generate('translate')">
+            🌍 Перевести
+        </button>
+
+        <button onclick="generate('telegram')">
+            📱 Для Telegram
+        </button>
+
+        <button onclick="generate('headlines')">
+            📰 Заголовки
+        </button>
+
+        <button onclick="generate('keywords')">
+            🔑 Ключевые слова
+        </button>
+
+        <button onclick="generate('seo')">
+            🎯 SEO
+        </button>
+
+    </div>
+
+
+    <div class="result">
+
+        <h2>Результат</h2>
+
+
+        <div class="comparison">
+
+            <div class="comparisonBlock">
+
+                <h3>Исходный текст</h3>
+
+                <div id="originalText">
+                    Здесь появится исходный текст...
+                </div>
+
+            </div>
+
+
+            <div class="comparisonBlock">
+
+                <h3>Результат AI</h3>
+
+                <div id="output">
+                    Здесь появится результат...
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="resultActions">
+
+            <button
+                id="copyButton"
+                onclick="copyResult()"
+                style="display: none;"
+            >
+                📋 Копировать результат
+            </button>
+
+
+            <button
+                id="clearButton"
+                onclick="clearAll()"
+            >
+                🧹 Очистить
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div id="historyPanel">
+
+    <div class="historyHeader">
+
+        <h2>История</h2>
+
+        <button onclick="toggleHistory()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div id="historyList">
+        Здесь пока ничего нет.
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
